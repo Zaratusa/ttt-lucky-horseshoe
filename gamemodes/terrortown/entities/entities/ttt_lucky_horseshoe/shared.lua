@@ -1,8 +1,8 @@
 -- author "Zaratusa"
 -- contact "http://steamcommunity.com/profiles/76561198032479768"
 
-CreateConVar("ttt_luckyhorseshoe_detective", 1, {FCVAR_SERVER_CAN_EXECUTE, FCVAR_ARCHIVE, FCVAR_REPLICATED}, "Should Detectives be able to buy the Lucky Horseshoe?", 0, 1)
-CreateConVar("ttt_luckyhorseshoe_traitor", 1, {FCVAR_SERVER_CAN_EXECUTE, FCVAR_ARCHIVE, FCVAR_REPLICATED}, "Should Traitors be able to buy the Lucky Horseshoe?", 0, 1)
+CreateConVar("ttt_luckyhorseshoe_detective", 1, SERVER and {FCVAR_ARCHIVE, FCVAR_REPLICATED} or FCVAR_REPLICATED, "Should Detectives be able to buy the Lucky Horseshoe?")
+CreateConVar("ttt_luckyhorseshoe_traitor", 1, SERVER and {FCVAR_ARCHIVE, FCVAR_REPLICATED} or FCVAR_REPLICATED, "Should Traitors be able to buy the Lucky Horseshoe?")
 
 EQUIP_LUCKY_HORSESHOE = (GenerateNewEquipmentID and GenerateNewEquipmentID()) or 64
 

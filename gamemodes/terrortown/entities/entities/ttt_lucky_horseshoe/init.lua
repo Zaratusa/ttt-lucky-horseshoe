@@ -6,8 +6,8 @@ AddCSLuaFile("shared.lua")
 
 include('shared.lua')
 
-CreateConVar("ttt_luckyhorseshoe_detective_loadout", 0, {FCVAR_SERVER_CAN_EXECUTE, FCVAR_ARCHIVE}, "Should Detectives have the Lucky Horseshoe in their loadout?", 0, 1)
-CreateConVar("ttt_luckyhorseshoe_traitor_loadout", 0, {FCVAR_SERVER_CAN_EXECUTE, FCVAR_ARCHIVE}, "Should Traitors have the Lucky Horseshoe in their loadout?", 0, 1)
+CreateConVar("ttt_luckyhorseshoe_detective_loadout", 0, FCVAR_ARCHIVE, "Should Detectives have the Lucky Horseshoe in their loadout?")
+CreateConVar("ttt_luckyhorseshoe_traitor_loadout", 0, FCVAR_ARCHIVE, "Should Traitors have the Lucky Horseshoe in their loadout?")
 
 --[[Perk logic]]--
 hook.Add("EntityTakeDamage", "TTTLuckyHorseshoe", function(ent, dmginfo)
